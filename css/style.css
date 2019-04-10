@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+    font-family:sans-serif;
+}
+#contenido {
+    width:30%;
+    margin:0 auto;
+}
+button {
+    padding:4px;
+    border-radius: 8px;
+    font-size:20px;
+}
+.pulsado {
+    background-color: grey;
+    color:white;
+}
+.divResultado {
+    padding:8px;
+    border-radius:8px;
+    background-color: lightgrey;
+}
+input {
+    font-size: 20px;
+}

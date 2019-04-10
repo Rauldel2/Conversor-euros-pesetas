@@ -4,33 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Conversor euros - pesetas</title>
 	<script src="js/jquery-2.1.0.min.js"></script>
-	<style>
-		body {
-			background-color: lightblue;
-			font-family:sans-serif;
-		}
-		#contenido {
-			width:30%;
-			margin:0 auto;
-		}
-		button {
-			padding:4px;
-			border-radius: 8px;
-			font-size:20px;
-		}
-		.pulsado {
-			background-color: grey;
-			color:white;
-		}
-		.divResultado {
-			padding:8px;
-			border-radius:8px;
-			background-color: lightgrey;
-		}
-		input {
-			font-size: 20px;
-		}
-	</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div id="contenido">
@@ -39,48 +13,7 @@
 		<div id="divResultado"></div>
 	</div>
 
-	<script>
-
-	//Variables
-	$contenido = $('#contenido');
-	$inputNumero = $contenido.find('#inputNumero');
-	$buttonCalcular = $contenido.find('#calcular');
-	$eurPes = $contenido.find('#eurPes');
-	$pesEur = $contenido.find('#pesEur');
-	$divResultado = $contenido.find('#divResultado');
-	$bEuros = true;
-	$resultado = 0;
-	$fConvEurPes = 166.386;
-	$fConvPesEur = 0.0060;
-
-	//De euros a pesetas
-	$eurPes.click(function() {
-		$eurPes.addClass('pulsado');
-		$pesEur.removeClass('pulsado');
-		$bEuros = true;
-	});
-
-	//De pesetas a euros
-	$pesEur.click(function() {
-		$pesEur.addClass('pulsado');
-		$eurPes.removeClass('pulsado');
-		$bEuros = false;
-	})
-
-	//Calculos
-	$buttonCalcular.click(function() {
-		switch ($bEuros) {
-			case true:
-			$resultado = $inputNumero.val() * $fConvEurPes;
-			break;
-			case false:
-			$resultado = $inputNumero.val() * $fConvPesEur;
-			break;
-		}
-		$divResultado.html('');
-		$divResultado.append('<h1>' + $resultado + '</h1>');
-	});
-	</script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
